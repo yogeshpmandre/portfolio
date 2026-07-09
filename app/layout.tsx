@@ -18,8 +18,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yogesh Mandre",
-  description: "Senior Principal Data Analyst",
+  title: "Yogesh Mandre | Senior Principal Data Analyst",
+
+  description:
+    "Senior Principal Data Analyst specializing in Analytics Engineering, AI-Ready Data Products, Snowflake, dbt, Tableau and GenAI.",
+
+  openGraph: {
+    title: "Yogesh Mandre",
+    description:
+      "Analytics Engineering | AI-Ready Data Products | Snowflake | dbt | Tableau | GenAI",
+    url: "https://ymandre.github.io",
+    siteName: "Yogesh Mandre",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
