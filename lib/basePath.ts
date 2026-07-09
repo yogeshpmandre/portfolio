@@ -3,7 +3,12 @@ const basePath =
 
 export function assetPath(path: string): string {
   const normalized = path.startsWith("/") ? path.slice(1) : path;
-  return `${basePath}/${normalized}`;
+  const encoded = normalized
+    .split("/")
+    .map((segment) => encodeURIComponent(segment))
+    .join("/");
+
+  return `${basePath}/${encoded}`;
 }
 
 export default basePath;
