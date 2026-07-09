@@ -3,6 +3,7 @@ import Section from "../ui/Section";
 import SectionTitle from "../ui/SectionTitle";
 import Button from "../ui/Button";
 
+import { assetPath } from "@/lib/basePath";
 import { profile } from "@/data";
 
 export default function Contact() {
@@ -30,11 +31,19 @@ export default function Contact() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Button>Email Me</Button>
+              <a href={`mailto:${profile.email}`}>
+                <Button>Email Me</Button>
+              </a>
 
-              <Button variant="secondary">
-                Download Resume
-              </Button>
+              <a
+                href={assetPath("resume/ATS_Yogesh_Mandre_Resume.pdf")}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button variant="secondary">
+                  Download Resume
+                </Button>
+              </a>
             </div>
           </div>
 

@@ -6,6 +6,7 @@ import FadeIn from "../animations/FadeIn";
 import Image from "next/image";
 
 import { profile, technologies } from "@/data";
+import { assetPath } from "@/lib/basePath";
 
 export default function Hero() {
   return (
@@ -70,7 +71,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="/resume/ATS_Yogesh_Mandre_Resume.pdf"
+                href={assetPath("resume/ATS_Yogesh_Mandre_Resume.pdf")}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -165,13 +166,13 @@ export default function Hero() {
                 {/* Profile Image */}
                 <div className="relative h-60 w-60 overflow-hidden rounded-full border-8 border-white shadow-2xl dark:border-slate-800 lg:h-96 lg:w-96">
                   <Image
-                    src="/profile.jpg"
-                    alt="Yogesh Mandre"
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 320px, 384px"
-                    className="object-cover object-[center_20%]"
-                  />
+                  src={assetPath("profile.jpg")}
+                  alt="Yogesh Mandre"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 320px, 384px"
+                  className="object-cover object-[center_20%]"
+                />
                 </div>
               </div>
             </div>

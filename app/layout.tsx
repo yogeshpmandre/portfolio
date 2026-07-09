@@ -18,6 +18,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    "https://yogeshpmandre.github.io/portfolio"
+  ),
+
   title: "Yogesh Mandre | Senior Principal Data Analyst",
 
   description:
@@ -27,17 +31,8 @@ export const metadata: Metadata = {
     title: "Yogesh Mandre",
     description:
       "Analytics Engineering | AI-Ready Data Products | Snowflake | dbt | Tableau | GenAI",
-    url: "https://ymandre.github.io",
+    url: "https://yogeshpmandre.github.io/portfolio",
     siteName: "Yogesh Mandre",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: "en_US",
-    type: "website",
   },
 };
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { assetPath } from "@/lib/basePath";
 import Image from "next/image";
 import {
   X,
@@ -156,7 +157,7 @@ export default function Certificates() {
                   key={certificate.id}
                   onClick={() =>
                     setSelectedImage(
-                      certificate.image
+                      assetPath(certificate.image)
                     )
                   }
                   className="
@@ -197,21 +198,17 @@ export default function Certificates() {
                     </div>
 
                     <Image
-                      src={
-                        certificate.image
-                      }
-                      alt={
-                        certificate.title
-                      }
-                      fill
-                      sizes="300px"
-                      className="
-                        object-cover
-                        transition-transform
-                        duration-500
-                        group-hover/card:scale-105
-                      "
-                    />
+                    src={assetPath(certificate.image)}
+                    alt={certificate.title}
+                    fill
+                    sizes="(max-width:768px) 100vw, 33vw"
+                    className="
+                      object-cover
+                      transition-transform
+                      duration-500
+                      group-hover:scale-105
+                    "
+                  />
                   </div>
 
                   {/* Details */}
